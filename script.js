@@ -1,16 +1,19 @@
 const listModal = document.querySelector('.modal-list');
 const cardBlock = document.querySelector('.cards');
+const arrowList = document.querySelector('.arrow-list');
 let modalState = false
 let dataInput = []
 // const axios = require('axios');
 function ShowModalList(){
     if(modalState === false){
         listModal.style.display = "block";
+        arrowList.style.transform="rotate(180deg)"
         modalState = true;
         return
     }
     else{
         listModal.style.display = "none";
+        arrowList.style.transform="rotate(0deg)"
         modalState = false;
     }
 }
